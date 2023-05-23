@@ -8,6 +8,10 @@ body {
 	@apply font-NunitoSans text-home text-light-300 dark:text-dark-text;
 }
 
+body {
+	@apply bg-light-200 dark:bg-dark-300;
+}
+
 @layer components {
 	.sub-details {
 		@apply space-y-2;
