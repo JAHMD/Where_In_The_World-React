@@ -1,45 +1,30 @@
-import { useEffect, useState } from "react";
-import Card from "../components/Card";
-import Filter from "../components/Filter";
-import { fetchCountries } from "../utils/api";
+import countries from "../assets/countries-screen.png";
 
-function Home() {
-	const [countries, setCountries] = useState(null);
-	const [desplayedCountries, setDesplayedCountries] = useState(null);
-	const countriesCards = desplayedCountries?.map((country) => {
-		return <Card key={country.id} country={country} />;
-	});
-
-	useEffect(() => {
-		async function getCountries() {
-			const countries = await fetchCountries();
-			setCountries(countries);
-		}
-		getCountries();
-	}, []);
-
+const Home = () => {
 	return (
-		<>
-			<Filter
-				countries={countries}
-				setDesplayedCountries={setDesplayedCountries}
-			/>
-			{desplayedCountries === null || desplayedCountries.length === 0 ? (
-				<div className="space-y-3 rounded-md bg-light-100 p-8 dark:bg-dark-200">
-					<h2 className="text-2xl font-extrabold capitalize text-light-300 dark:text-dark-100">
-						No countries found
-					</h2>
-					<p className="text-base text-light-text dark:text-dark-text md:text-lg">
-						There are no countries that match your filters
+		<div className="flex flex-col items-center gap-6 text-base lg:flex-row lg:text-lg">
+			<div className="text-center lg:text-start">
+				<h2 className="mb-4 text-3xl font-extrabold text-light-300 dark:text-dark-100">
+					Welcome to <br />
+					Where In The World!
+				</h2>
+				<div className="max-w-2xl space-y-3 leading-relaxed text-light-text dark:text-dark-text">
+					<p>
+						Discover fascinating details about different countries around the
+						world.
+					</p>
+					<p>
+						From the majestic wonders of nature to vibrant cities brimming with
+						culture and history, Where in the World allows you to embark on a
+						virtual journey and uncover the richness of our planet.
 					</p>
 				</div>
-			) : (
-				<div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-					{countriesCards}
-				</div>
-			)}
-		</>
+			</div>
+			<div className="mt-10 rounded-lg bg-dark-200 p-6 lg:max-w-xl">
+				<img src={countries} alt="countries image" className="rounded-md" />
+			</div>
+		</div>
 	);
-}
+};
 
 export default Home;

@@ -8,7 +8,6 @@ function Filter({ countries, setDesplayedCountries }) {
 	const filters = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
 
 	useEffect(() => {
-		console.log(countries);
 		setDesplayedCountries(countries);
 	}, [countries, setDesplayedCountries]);
 
@@ -55,7 +54,7 @@ function Filter({ countries, setDesplayedCountries }) {
 				<select
 					name="select"
 					id="select"
-					className="max-w-fit rounded-md bg-light-100 px-6 py-4 text-light-text dark:bg-dark-200 dark:text-dark-text"
+					className="max-w-fit cursor-pointer rounded-md bg-light-100 px-6 py-4 font-semibold text-light-text dark:bg-dark-200 dark:text-dark-text"
 					onChange={handleRegionChange}
 					defaultValue="Filter By Region"
 				>

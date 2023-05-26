@@ -3,7 +3,7 @@ function Card({ country }) {
 	const { flags, name, population, capital, region } = country;
 
 	return (
-		<article className="overflow-hidden rounded-md bg-light-100 dark:bg-dark-200">
+		<article className="overflow-hidden rounded-lg bg-light-100 shadow-sm dark:bg-dark-200">
 			<div className="flex min-h-fit sm:h-52">
 				<img
 					src={flags.png}

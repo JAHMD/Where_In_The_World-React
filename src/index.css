@@ -12,7 +12,24 @@ body {
 	@apply bg-light-200 dark:bg-dark-300;
 }
 
+nav a {
+	@apply inline-block w-full rounded-md px-4 py-2 transition-colors duration-200 hover:bg-light-200 hover:dark:bg-dark-300;
+}
+nav a.active {
+	@apply bg-light-200  dark:bg-dark-300;
+}
+
 @layer components {
+	nav.active {
+		@apply order-last h-fit w-full overflow-hidden;
+	}
+	nav.active ul {
+		@apply flex-col border-t pt-6 text-center;
+	}
+	nav.active ul li {
+		@apply w-full;
+	}
+
 	.sub-details {
 		@apply space-y-2;
 	}

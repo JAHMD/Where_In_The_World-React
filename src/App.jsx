@@ -5,8 +5,8 @@ function App() {
 	return (
 		<>
 			<Navbar />
-			<main className="min-h-screen bg-light-200 dark:bg-dark-300">
-				<section className="container py-6">
+			<main className="bg-light-200 dark:bg-dark-300">
+				<section className="container py-8">
 					<Outlet />
 				</section>
 			</main>
