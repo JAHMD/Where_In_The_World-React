@@ -1,6 +1,3 @@
 TODO:
-  - add icon to the card when the user hover on it and make it clickable.
   - create the country details component and set its page route.
   - add fixed height to the flags to keep the cards at the same height.
-  - add loading state
-  - refactor the code to use the loaders.

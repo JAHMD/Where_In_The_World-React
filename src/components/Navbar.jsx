@@ -12,7 +12,6 @@ function Navbar() {
 		}
 		return isDark;
 	});
-	console.log(screenWidth);
 
 	useEffect(() => {
 		window.addEventListener("resize", () => {

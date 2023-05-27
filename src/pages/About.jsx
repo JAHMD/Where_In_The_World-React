@@ -3,9 +3,9 @@ import earth from "../assets/earth.png";
 
 const About = () => {
 	return (
-		<div className="text-ligh-text dark:text-dark-tex flex flex-col items-center justify-between font-light md:flex-row">
+		<div className="text-ligh-text dark:text-dark-tex flex flex-col items-center justify-center md:flex-row">
 			<div className="max-w-lg space-y-3 text-center text-base leading-relaxed md:max-w-2xl md:text-start lg:text-lg">
-				<h2 className="mb-4 text-3xl font-bold text-light-300 dark:text-dark-100">
+				<h2 className="mb-4 text-3xl font-extrabold text-light-300 dark:text-dark-100">
 					About Us
 				</h2>
 				<p>
@@ -21,12 +21,12 @@ const About = () => {
 				</p>
 				<Link
 					to="/countries"
-					className="mt-4 inline-block rounded-md px-4 py-2 font-semibold dark:bg-dark-200"
+					className="mt-4 inline-block rounded-md bg-light-100 px-4 py-2 font-semibold dark:bg-dark-200"
 				>
 					Explore Countries
 				</Link>
 			</div>
-			<div className="mt-4 flex md:mt-0">
+			<div className="mt-4 flex max-w-xl md:mt-0">
 				<img src={earth} alt="earth image" className="w-full" />
 			</div>
 		</div>

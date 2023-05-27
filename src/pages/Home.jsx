@@ -2,7 +2,7 @@ import countries from "../assets/countries-screen.png";
 
 const Home = () => {
 	return (
-		<div className="flex flex-col items-center gap-6 text-base lg:flex-row lg:text-lg">
+		<div className="flex flex-col items-center justify-center gap-6 text-base lg:flex-row lg:text-lg">
 			<div className="text-center lg:text-start">
 				<h2 className="mb-4 text-3xl font-extrabold text-light-300 dark:text-dark-100">
 					Welcome to <br />
@@ -20,7 +20,7 @@ const Home = () => {
 					</p>
 				</div>
 			</div>
-			<div className="mt-10 rounded-lg bg-dark-200 p-6 lg:max-w-xl">
+			<div className="mt-10 rounded-lg bg-light-100 p-6 dark:bg-dark-200 lg:max-w-xl">
 				<img src={countries} alt="countries image" className="rounded-md" />
 			</div>
 		</div>
