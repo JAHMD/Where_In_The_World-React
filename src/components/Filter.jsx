@@ -5,7 +5,15 @@ import { FaSearch } from "react-icons/fa";
 function Filter({ countries, setDesplayedCountries }) {
 	const [regionFilter, setRegionFilter] = useState("All");
 	const [searchVal, setSearchVal] = useState("");
-	const filters = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
+	const filters = [
+		"All",
+		"Africa",
+		"Americas",
+		"Antarctic",
+		"Asia",
+		"Europe",
+		"Oceania",
+	];
 
 	useEffect(() => {
 		setDesplayedCountries(countries);
@@ -13,7 +21,7 @@ function Filter({ countries, setDesplayedCountries }) {
 
 	function handleInputChange({ target }) {
 		const search = target.value;
-		const filteredCountries = filterCountries({ search });
+		const filteredCountries = filterCountries({ search: search.toLowerCase() });
 		setSearchVal(search);
 		setDesplayedCountries(filteredCountries);
 	}
@@ -25,7 +33,10 @@ function Filter({ countries, setDesplayedCountries }) {
 		setDesplayedCountries(filteredCountries);
 	}
 
-	function filterCountries({ search = searchVal, filter = regionFilter }) {
+	function filterCountries({
+		search = searchVal.toLocaleLowerCase(),
+		filter = regionFilter,
+	}) {
 		const filteredCountries = countries?.filter(
 			({ region, name: { common } }) =>
 				common?.toLowerCase().includes(search) &&

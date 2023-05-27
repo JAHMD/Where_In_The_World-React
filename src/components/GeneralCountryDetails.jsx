@@ -8,7 +8,7 @@ function GeneralCountryDetails({ country }) {
 				Population: <span>{population}</span>
 			</p>
 			<p className="detail">
-				Capital: <span>{capital?.join(", ") || "No capital"}</span>
+				Capital: <span>{capital ? capital?.join(", ") : "No capital"}</span>
 			</p>
 			<p className="detail">
 				Region: <span>{region}</span>

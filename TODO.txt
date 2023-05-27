@@ -1,3 +1,1 @@
 TODO:
-  - create the country details component and set its page route.
-  - add fixed height to the flags to keep the cards at the same height.
